@@ -32,9 +32,7 @@ namespace MegaDesk_4_JessieJi
             bool isValide = ValidateChildren(ValidationConstraints.Enabled);
             //string filename = "quotes.txt";
             if (isValide)
-            {
                 WriteFile();
-            }
         }
 
         private void WriteFile()
@@ -49,15 +47,23 @@ namespace MegaDesk_4_JessieJi
                     writeFile.Write(numDrawerBox.Text + ",");
                     writeFile.Write(surfMtrlBox.Text + ",");
                     writeFile.Write(rushOrderBox.Text + ",");
-                    writeFile.WriteLine(DateTime.Now.ToString("M/dd/yyyy"));
+                    writeFile.Write(lblTotalPrice.Text + ",");
+                    writeFile.WriteLine(DateTime.Now.ToString("MM/dd/yyyy"));
                     MessageBox.Show("Quote has been created!");
                     custNameBox.Clear();
                     deskDepthBox.Clear();
                     deskWidthBox.Clear();
                     numDrawerBox.Clear();
+                    lblSizePrice.Text = "$";
+                    lblNumDrawerPrice.Text = "$";
+                    lblSurfMtrlPrice.Text = "$";
+                    lblRushOrderPrice.Text = "$";
+                    lblTotalPrice.Text = "$";
+
                     surfMtrlBox.SelectedIndex = -1;
                     rushOrderBox.SelectedIndex = -1;
                     writeFile.Close();
+
                 }
             }
             catch (Exception e)
@@ -224,5 +230,79 @@ namespace MegaDesk_4_JessieJi
             return true;
         }
 
+        private void btnGetPrice_Click(object sender, EventArgs e)
+        {
+            bool isValide = ValidateChildren(ValidationConstraints.Enabled);
+            //string filename = "quotes.txt";
+            if (isValide)
+                GetPrice();
+        }
+
+        private void GetPrice()
+        {
+
+            int width = int.Parse(deskWidthBox.Text);
+            int depth = int.Parse(deskDepthBox.Text);
+            int size = width * depth;
+            int sizePrice, drawerPrice, mtrlPrice, surfPrice, rushPrice;
+            int.TryParse(numDrawerBox.Text, out int nDrawers);
+            /*
+            if (int.TryParse(numDrawerBox.Text, out int nDrawers))
+                drawerPrice = nDrawers * 50;
+            else
+                drawerPrice = 0;
+                */
+
+            Desk desk = new Desk(int.Parse(deskWidthBox.Text), int.Parse(deskDepthBox.Text), nDrawers);
+            DeskQuotes deskQuotes = new DeskQuotes(desk);
+
+            /*
+            if (size > 1000)
+                sizePrice = size - 1000;
+            else
+                sizePrice = 0;
+
+
+
+            switch (surfMtrlBox.Text)
+            {
+                case "Pine":
+                    mtrlPrice = 50;
+                    break;
+                case "Oak":
+                    mtrlPrice = 200;
+                    break;
+                case "Laminate":
+                    mtrlPrice = 100;
+                    break;
+                case "Rosewood":
+                    mtrlPrice = 300;
+                    break;
+                case "Veneer":
+                    mtrlPrice = 125;
+                    break;
+                default:
+                    mtrlPrice = 0;
+                    break;
+            }*/
+
+            deskQuotes.CalcOversizeCost();
+            deskQuotes.CalcDrawerCost();
+            deskQuotes.CalcMtrlCost(surfMtrlBox.Text);
+            deskQuotes.CalcRushOrderCost(rushOrderBox.Text);
+            deskQuotes.CalcTotalCost();
+
+            lblSizePrice.Text = "$" + deskQuotes.OversizeCost;
+            lblNumDrawerPrice.Text = "$" + deskQuotes.DrawerCost;
+            lblSurfMtrlPrice.Text = "$" + deskQuotes.MaterialCost;
+            lblRushOrderPrice.Text = "$" + deskQuotes.RushOrderCost;
+            lblTotalPrice.Text = "$" + deskQuotes.TotalCost;
+
+            /*
+            lblSizePrice.Text = "$" + sizePrice.ToString();
+            lblNumDrawerPrice.Text = "$" + drawerPrice.ToString();
+            lblSurfMtrlPrice.Text = "$" + mtrlPrice.ToString();
+            lblRushOrderPrice.Text = ;*/
+        }
     }
 }

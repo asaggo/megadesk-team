@@ -29,6 +29,7 @@ namespace MegaDesk_4_JessieJi
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            listQuotes.Items.Clear();
             ReadFile();
         }
 
@@ -54,15 +55,11 @@ namespace MegaDesk_4_JessieJi
                 if (temp[4].ToString().Equals(findThisMtrl))
                 {
                     listViewItem.Text = temp[0];
-                    for (int i = 1; i < 7; i++)
+                    for (int i = 1; i < 8; i++)
                         listViewItem.SubItems.Add(temp[i]);
                     listQuotes.Items.Add(listViewItem);
                 }
-                else
-                {
-                    listQuotes.Items.Clear();
-                    MessageBox.Show("No quote is created for the material");
-                }
+               
             }
             streamReader.Close();
         }

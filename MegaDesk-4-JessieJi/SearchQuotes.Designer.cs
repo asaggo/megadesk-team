@@ -40,6 +40,7 @@
             this.mtrl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.rushOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.totalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnBackToMenu
@@ -92,6 +93,7 @@
             this.numDrawers,
             this.mtrl,
             this.rushOrder,
+            this.totalPrice,
             this.date});
             this.listQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listQuotes.FullRowSelect = true;
@@ -134,7 +136,14 @@
             // 
             // date
             // 
+            this.date.DisplayIndex = 6;
             this.date.Text = "Date";
+            // 
+            // totalPrice
+            // 
+            this.totalPrice.DisplayIndex = 7;
+            this.totalPrice.Text = "Total Price";
+            this.totalPrice.Width = 85;
             // 
             // SearchQuotes
             // 
@@ -167,5 +176,6 @@
         private System.Windows.Forms.ColumnHeader mtrl;
         private System.Windows.Forms.ColumnHeader rushOrder;
         private System.Windows.Forms.ColumnHeader date;
+        private System.Windows.Forms.ColumnHeader totalPrice;
     }
 }

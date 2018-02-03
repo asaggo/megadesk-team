@@ -31,10 +31,9 @@ namespace MegaDesk_4_JessieJi
             size = width * depth;
             oversize = size > 1000 ? size - 1000: 0;
             if (oversize > 0) //not necessary to have if statement here. maybe later I can use try and catch
-            {
                 oversizeCost = oversize;
-            }
         }
+
         public void CalcMtrlCost(string material)
         {
             switch (material)
@@ -54,8 +53,8 @@ namespace MegaDesk_4_JessieJi
                 case "Veneer":
                     materialCost = (int)SurfaceMaterial.Veneer;
                     break;
-                default: //error
-                    materialCost = -1;
+                default: //error or empty
+                    materialCost = 0;
                     break;
             }
             
@@ -66,34 +65,42 @@ namespace MegaDesk_4_JessieJi
             drawerCost = desk.NumDrawers * 50;
         }
 
-        public void CalcRushOrderCost(int rushOrderDays)
+        public void CalcRushOrderCost(string rushOrderDays)
         {
             if (size < 1000)
             {
-                if (rushOrderDays == 3)
+                if (rushOrderDays.Equals("3 days"))
                     rushOrderCost = 60;
-                else if (rushOrderDays == 5)
+                else if (rushOrderDays.Equals("5 days"))
                     rushOrderCost = 40;
-                else // need to check
+                else if (rushOrderDays.Equals("7 days"))
                     rushOrderCost = 30;
-            }else if (size >= 1000 || size <= 2000)
+                else
+                    rushOrderCost = 0;
+            }
+            else if (size >= 1000 || size <= 2000)
             {
-                if (rushOrderDays == 3)
+                if (rushOrderDays.Equals("3 days"))
                     rushOrderCost = 70;
-                else if (rushOrderDays == 5)
+                else if (rushOrderDays.Equals("5 days"))
                     rushOrderCost = 50;
-                else // need to check
+                else if (rushOrderDays.Equals("7 days"))
                     rushOrderCost = 35;
+                else
+                    rushOrderCost = 0;
             }
             else //(size > 2000) //need to check
             {
-                if (rushOrderDays == 3)
+                if (rushOrderDays.Equals("3 days"))
                     rushOrderCost = 80;
-                else if (rushOrderDays == 5)
+                else if (rushOrderDays.Equals("5 days"))
                     rushOrderCost = 60;
-                else // need to check
+                else if (rushOrderDays.Equals("7 days"))
                     rushOrderCost = 40;
+                else
+                    rushOrderCost = 0;
             }
+            
         }
 
         public void CalcTotalCost()

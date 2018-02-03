@@ -45,6 +45,15 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.surfMtrlBox = new System.Windows.Forms.ComboBox();
             this.rushOrderBox = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblSizePrice = new System.Windows.Forms.Label();
+            this.lblNumDrawerPrice = new System.Windows.Forms.Label();
+            this.lblSurfMtrlPrice = new System.Windows.Forms.Label();
+            this.lblRushOrderPrice = new System.Windows.Forms.Label();
+            this.btnGetPrice = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,14 +159,14 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(23, 89);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 17);
+            this.label7.Size = new System.Drawing.Size(169, 17);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Number of Drawer:";
+            this.label7.Text = "Number of Drawer:  x $50";
             // 
             // btnBackToMenu
             // 
             this.btnBackToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackToMenu.Location = new System.Drawing.Point(15, 176);
+            this.btnBackToMenu.Location = new System.Drawing.Point(15, 215);
             this.btnBackToMenu.Name = "btnBackToMenu";
             this.btnBackToMenu.Size = new System.Drawing.Size(96, 43);
             this.btnBackToMenu.TabIndex = 13;
@@ -168,7 +177,7 @@
             // btnAddNewQuote
             // 
             this.btnAddNewQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewQuote.Location = new System.Drawing.Point(160, 176);
+            this.btnAddNewQuote.Location = new System.Drawing.Point(117, 215);
             this.btnAddNewQuote.Name = "btnAddNewQuote";
             this.btnAddNewQuote.Size = new System.Drawing.Size(112, 43);
             this.btnAddNewQuote.TabIndex = 14;
@@ -201,11 +210,111 @@
             this.rushOrderBox.Size = new System.Drawing.Size(121, 21);
             this.rushOrderBox.TabIndex = 18;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(10, 176);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 25);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Total Price:";
+            // 
+            // lblTotalPrice
+            // 
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.Location = new System.Drawing.Point(129, 176);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(24, 25);
+            this.lblTotalPrice.TabIndex = 20;
+            this.lblTotalPrice.Text = "$";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(285, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 17);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Price";
+            // 
+            // lblSizePrice
+            // 
+            this.lblSizePrice.AutoSize = true;
+            this.lblSizePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSizePrice.Location = new System.Drawing.Point(285, 62);
+            this.lblSizePrice.Name = "lblSizePrice";
+            this.lblSizePrice.Size = new System.Drawing.Size(16, 17);
+            this.lblSizePrice.TabIndex = 22;
+            this.lblSizePrice.Text = "$";
+            // 
+            // lblNumDrawerPrice
+            // 
+            this.lblNumDrawerPrice.AutoSize = true;
+            this.lblNumDrawerPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumDrawerPrice.Location = new System.Drawing.Point(285, 89);
+            this.lblNumDrawerPrice.Name = "lblNumDrawerPrice";
+            this.lblNumDrawerPrice.Size = new System.Drawing.Size(16, 17);
+            this.lblNumDrawerPrice.TabIndex = 23;
+            this.lblNumDrawerPrice.Text = "$";
+            // 
+            // lblSurfMtrlPrice
+            // 
+            this.lblSurfMtrlPrice.AutoSize = true;
+            this.lblSurfMtrlPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurfMtrlPrice.Location = new System.Drawing.Point(285, 118);
+            this.lblSurfMtrlPrice.Name = "lblSurfMtrlPrice";
+            this.lblSurfMtrlPrice.Size = new System.Drawing.Size(16, 17);
+            this.lblSurfMtrlPrice.TabIndex = 24;
+            this.lblSurfMtrlPrice.Text = "$";
+            // 
+            // lblRushOrderPrice
+            // 
+            this.lblRushOrderPrice.AutoSize = true;
+            this.lblRushOrderPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRushOrderPrice.Location = new System.Drawing.Point(285, 150);
+            this.lblRushOrderPrice.Name = "lblRushOrderPrice";
+            this.lblRushOrderPrice.Size = new System.Drawing.Size(16, 17);
+            this.lblRushOrderPrice.TabIndex = 25;
+            this.lblRushOrderPrice.Text = "$";
+            // 
+            // btnGetPrice
+            // 
+            this.btnGetPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetPrice.Location = new System.Drawing.Point(235, 215);
+            this.btnGetPrice.Name = "btnGetPrice";
+            this.btnGetPrice.Size = new System.Drawing.Size(112, 43);
+            this.btnGetPrice.TabIndex = 26;
+            this.btnGetPrice.Text = "Get Price";
+            this.btnGetPrice.UseVisualStyleBackColor = true;
+            this.btnGetPrice.Click += new System.EventHandler(this.btnGetPrice_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(213, 38);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(112, 17);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Base Price $200";
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 231);
+            this.ClientSize = new System.Drawing.Size(367, 266);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btnGetPrice);
+            this.Controls.Add(this.lblRushOrderPrice);
+            this.Controls.Add(this.lblSurfMtrlPrice);
+            this.Controls.Add(this.lblNumDrawerPrice);
+            this.Controls.Add(this.lblSizePrice);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblTotalPrice);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.rushOrderBox);
             this.Controls.Add(this.surfMtrlBox);
             this.Controls.Add(this.btnAddNewQuote);
@@ -247,5 +356,14 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ComboBox surfMtrlBox;
         private System.Windows.Forms.ComboBox rushOrderBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.Label lblRushOrderPrice;
+        private System.Windows.Forms.Label lblSurfMtrlPrice;
+        private System.Windows.Forms.Label lblNumDrawerPrice;
+        private System.Windows.Forms.Label lblSizePrice;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnGetPrice;
+        private System.Windows.Forms.Label label10;
     }
 }
