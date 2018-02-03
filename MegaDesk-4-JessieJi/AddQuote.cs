@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MegaDesk_3_JessieJi
+namespace MegaDesk_4_JessieJi
 {
     public partial class AddQuote : Form
     {
         public AddQuote()
         {
             InitializeComponent();
-            //deskDepthBox.Validating += new CancelEventHandler(deskWidthBox_Validating);
+            surfMtrlBox.SelectedIndex = -1;
+            surfMtrlBox.DataSource = Enum.GetValues(typeof(SurfaceMaterial));
         }
 
         private void btnBackToMenu_Click(object sender, EventArgs e)
@@ -27,7 +29,41 @@ namespace MegaDesk_3_JessieJi
 
         private void btnAddNewQuote_Click(object sender, EventArgs e)
         {
-            ValidateChildren(ValidationConstraints.Enabled);
+            bool isValide = ValidateChildren(ValidationConstraints.Enabled);
+            //string filename = "quotes.txt";
+            if (isValide)
+            {
+                WriteFile();
+            }
+        }
+
+        private void WriteFile()
+        {
+            try
+            {
+                using (StreamWriter writeFile = new StreamWriter("quotes.txt", append: true))
+                {
+                    writeFile.Write(custNameBox.Text + ",");
+                    writeFile.Write(deskDepthBox.Text + ",");
+                    writeFile.Write(deskWidthBox.Text + ",");
+                    writeFile.Write(numDrawerBox.Text + ",");
+                    writeFile.Write(surfMtrlBox.Text + ",");
+                    writeFile.Write(rushOrderBox.Text + ",");
+                    writeFile.WriteLine(DateTime.Now.ToString("M/dd/yyyy"));
+                    MessageBox.Show("Quote has been created!");
+                    custNameBox.Clear();
+                    deskDepthBox.Clear();
+                    deskWidthBox.Clear();
+                    numDrawerBox.Clear();
+                    surfMtrlBox.SelectedIndex = -1;
+                    rushOrderBox.SelectedIndex = -1;
+                    writeFile.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error when try to use StreamWriter. It says : " + e.Message);
+            }
         }
 
         /* 

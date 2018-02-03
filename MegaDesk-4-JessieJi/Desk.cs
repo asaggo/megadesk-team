@@ -4,13 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MegaDesk_3_JessieJi
+namespace MegaDesk_4_JessieJi
 {
+
+    public enum SurfaceMaterial
+    {
+        Oak = 200,
+        Laminate = 100,
+        Pine = 50,
+        Rosewood = 300,
+        Veneer = 125
+    };
     class Desk
     {
-        private int Width { get; set; }
-        private int Depth { get; set; }
-        private int NumDrawers { get; set; }
-        private string SurfaceMaterial { get; set; }
+        private int width, depth, numDrawers;
+        public int Width { get { return width; } set { width = value; } }
+        public int Depth { get { return depth; } set { depth = value; } }
+        public int NumDrawers { get { return numDrawers; } set { numDrawers = value; } }
+        public SurfaceMaterial SurfMaterial;
+        public Desk(int w, int d, int nd)
+        {
+            Width = w;
+            Depth = d;
+            NumDrawers = nd;
+        }
     }
+
+    
+    
 }

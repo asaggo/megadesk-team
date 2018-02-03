@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_3_JessieJi
+﻿namespace MegaDesk_4_JessieJi
 {
     partial class AddQuote
     {
@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.custNameBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.surfMaterialBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.numDrawerBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,12 +42,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnBackToMenu = new System.Windows.Forms.Button();
             this.btnAddNewQuote = new System.Windows.Forms.Button();
-            this.rushOrderGroupBox = new System.Windows.Forms.GroupBox();
-            this.rbtnSevenDays = new System.Windows.Forms.RadioButton();
-            this.rbtnFiveDays = new System.Windows.Forms.RadioButton();
-            this.rbtnThreeDays = new System.Windows.Forms.RadioButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.rushOrderGroupBox.SuspendLayout();
+            this.surfMtrlBox = new System.Windows.Forms.ComboBox();
+            this.rushOrderBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,25 +70,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 143);
+            this.label2.Location = new System.Drawing.Point(6, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 17);
+            this.label2.Size = new System.Drawing.Size(132, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Rush Order Option";
-            // 
-            // surfMaterialBox
-            // 
-            this.surfMaterialBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.surfMaterialBox.Location = new System.Drawing.Point(151, 115);
-            this.surfMaterialBox.Name = "surfMaterialBox";
-            this.surfMaterialBox.Size = new System.Drawing.Size(110, 23);
-            this.surfMaterialBox.TabIndex = 5;
+            this.label2.Text = "Rush Order Option:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 115);
+            this.label3.Location = new System.Drawing.Point(23, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 17);
             this.label3.TabIndex = 4;
@@ -105,6 +93,7 @@
             this.numDrawerBox.Name = "numDrawerBox";
             this.numDrawerBox.Size = new System.Drawing.Size(59, 23);
             this.numDrawerBox.TabIndex = 7;
+            this.numDrawerBox.Validating += new System.ComponentModel.CancelEventHandler(this.numDrawerBox_Validating);
             // 
             // label4
             // 
@@ -168,7 +157,7 @@
             // btnBackToMenu
             // 
             this.btnBackToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackToMenu.Location = new System.Drawing.Point(15, 206);
+            this.btnBackToMenu.Location = new System.Drawing.Point(15, 176);
             this.btnBackToMenu.Name = "btnBackToMenu";
             this.btnBackToMenu.Size = new System.Drawing.Size(96, 43);
             this.btnBackToMenu.TabIndex = 13;
@@ -179,7 +168,7 @@
             // btnAddNewQuote
             // 
             this.btnAddNewQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewQuote.Location = new System.Drawing.Point(160, 206);
+            this.btnAddNewQuote.Location = new System.Drawing.Point(160, 176);
             this.btnAddNewQuote.Name = "btnAddNewQuote";
             this.btnAddNewQuote.Size = new System.Drawing.Size(112, 43);
             this.btnAddNewQuote.TabIndex = 14;
@@ -187,63 +176,38 @@
             this.btnAddNewQuote.UseVisualStyleBackColor = true;
             this.btnAddNewQuote.Click += new System.EventHandler(this.btnAddNewQuote_Click);
             // 
-            // rushOrderGroupBox
-            // 
-            this.rushOrderGroupBox.Controls.Add(this.rbtnSevenDays);
-            this.rushOrderGroupBox.Controls.Add(this.rbtnFiveDays);
-            this.rushOrderGroupBox.Controls.Add(this.rbtnThreeDays);
-            this.rushOrderGroupBox.Location = new System.Drawing.Point(26, 163);
-            this.rushOrderGroupBox.Name = "rushOrderGroupBox";
-            this.rushOrderGroupBox.Size = new System.Drawing.Size(235, 37);
-            this.rushOrderGroupBox.TabIndex = 15;
-            this.rushOrderGroupBox.TabStop = false;
-            // 
-            // rbtnSevenDays
-            // 
-            this.rbtnSevenDays.AutoSize = true;
-            this.rbtnSevenDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnSevenDays.Location = new System.Drawing.Point(161, 14);
-            this.rbtnSevenDays.Name = "rbtnSevenDays";
-            this.rbtnSevenDays.Size = new System.Drawing.Size(68, 21);
-            this.rbtnSevenDays.TabIndex = 2;
-            this.rbtnSevenDays.TabStop = true;
-            this.rbtnSevenDays.Text = "7 days";
-            this.rbtnSevenDays.UseVisualStyleBackColor = true;
-            // 
-            // rbtnFiveDays
-            // 
-            this.rbtnFiveDays.AutoSize = true;
-            this.rbtnFiveDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFiveDays.Location = new System.Drawing.Point(84, 14);
-            this.rbtnFiveDays.Name = "rbtnFiveDays";
-            this.rbtnFiveDays.Size = new System.Drawing.Size(68, 21);
-            this.rbtnFiveDays.TabIndex = 1;
-            this.rbtnFiveDays.TabStop = true;
-            this.rbtnFiveDays.Text = "5 days";
-            this.rbtnFiveDays.UseVisualStyleBackColor = true;
-            // 
-            // rbtnThreeDays
-            // 
-            this.rbtnThreeDays.AutoSize = true;
-            this.rbtnThreeDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnThreeDays.Location = new System.Drawing.Point(10, 14);
-            this.rbtnThreeDays.Name = "rbtnThreeDays";
-            this.rbtnThreeDays.Size = new System.Drawing.Size(68, 21);
-            this.rbtnThreeDays.TabIndex = 0;
-            this.rbtnThreeDays.TabStop = true;
-            this.rbtnThreeDays.Text = "3 days";
-            this.rbtnThreeDays.UseVisualStyleBackColor = true;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // surfMtrlBox
+            // 
+            this.surfMtrlBox.FormattingEnabled = true;
+            this.surfMtrlBox.Location = new System.Drawing.Point(151, 118);
+            this.surfMtrlBox.Name = "surfMtrlBox";
+            this.surfMtrlBox.Size = new System.Drawing.Size(121, 21);
+            this.surfMtrlBox.TabIndex = 17;
+            // 
+            // rushOrderBox
+            // 
+            this.rushOrderBox.FormattingEnabled = true;
+            this.rushOrderBox.Items.AddRange(new object[] {
+            "3 days",
+            "5 days",
+            "7 days",
+            "No rush (14 days)"});
+            this.rushOrderBox.Location = new System.Drawing.Point(151, 146);
+            this.rushOrderBox.Name = "rushOrderBox";
+            this.rushOrderBox.Size = new System.Drawing.Size(121, 21);
+            this.rushOrderBox.TabIndex = 18;
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.rushOrderGroupBox);
+            this.ClientSize = new System.Drawing.Size(284, 231);
+            this.Controls.Add(this.rushOrderBox);
+            this.Controls.Add(this.surfMtrlBox);
             this.Controls.Add(this.btnAddNewQuote);
             this.Controls.Add(this.btnBackToMenu);
             this.Controls.Add(this.label7);
@@ -253,15 +217,12 @@
             this.Controls.Add(this.deskWidthBox);
             this.Controls.Add(this.numDrawerBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.surfMaterialBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.custNameBox);
             this.Controls.Add(this.label1);
             this.Name = "AddQuote";
             this.Text = "Add New Quote";
-            this.rushOrderGroupBox.ResumeLayout(false);
-            this.rushOrderGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -273,7 +234,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox custNameBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox surfMaterialBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox numDrawerBox;
         private System.Windows.Forms.Label label4;
@@ -284,10 +244,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnBackToMenu;
         private System.Windows.Forms.Button btnAddNewQuote;
-        private System.Windows.Forms.GroupBox rushOrderGroupBox;
-        private System.Windows.Forms.RadioButton rbtnSevenDays;
-        private System.Windows.Forms.RadioButton rbtnFiveDays;
-        private System.Windows.Forms.RadioButton rbtnThreeDays;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox surfMtrlBox;
+        private System.Windows.Forms.ComboBox rushOrderBox;
     }
 }

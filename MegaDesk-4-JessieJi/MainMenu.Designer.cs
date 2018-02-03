@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_3_JessieJi
+﻿namespace MegaDesk_4_JessieJi
 {
     partial class MainMenu
     {
