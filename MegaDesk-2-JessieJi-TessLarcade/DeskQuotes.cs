@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,36 +67,39 @@ namespace MegaDesk_4_JessieJi
 
         public void CalcRushOrderCost(string rushOrderDays)
         {
-            int[,] rushorderArray = new int[3, 3];
-            string[] items = System.IO.File.ReadAllLines("rushOrderPrices.txt");
-            for (int i = 0; i < items.Length; i++)
-            {
-                int col = i % 3;
-                int row = i / 3;
-                rushorderArray[row, col] = Convert.ToInt32(items[i]);
-            }
-
-            int c, r = 0;
-            if (rushOrderDays.Equals("3 days"))
-                r = 0;
-            else if (rushOrderDays.Equals("5 days"))
-                r = 1;
-            else if (rushOrderDays.Equals("7 days"))
-                r = 2;
-            else //no rush
-            {
-                rushOrderCost = 0;
-                return;
-            }
-
             if (size < 1000)
-                c = 0;
-            else if(size >= 1000 && size <= 2000)
-                c = 1;
-            else
-                c = 2;
-
-            rushOrderCost = rushorderArray[r, c];
+            {
+                if (rushOrderDays.Equals("3 days"))
+                    rushOrderCost = 60;
+                else if (rushOrderDays.Equals("5 days"))
+                    rushOrderCost = 40;
+                else if (rushOrderDays.Equals("7 days"))
+                    rushOrderCost = 30;
+                else
+                    rushOrderCost = 0;
+            }
+            else if (size >= 1000 || size <= 2000)
+            {
+                if (rushOrderDays.Equals("3 days"))
+                    rushOrderCost = 70;
+                else if (rushOrderDays.Equals("5 days"))
+                    rushOrderCost = 50;
+                else if (rushOrderDays.Equals("7 days"))
+                    rushOrderCost = 35;
+                else
+                    rushOrderCost = 0;
+            }
+            else //(size > 2000) //need to check
+            {
+                if (rushOrderDays.Equals("3 days"))
+                    rushOrderCost = 80;
+                else if (rushOrderDays.Equals("5 days"))
+                    rushOrderCost = 60;
+                else if (rushOrderDays.Equals("7 days"))
+                    rushOrderCost = 40;
+                else
+                    rushOrderCost = 0;
+            }
             
         }
 
