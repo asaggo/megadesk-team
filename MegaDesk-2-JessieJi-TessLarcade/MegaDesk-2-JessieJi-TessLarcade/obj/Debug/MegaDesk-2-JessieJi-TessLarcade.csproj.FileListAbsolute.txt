@@ -10,3 +10,6 @@ C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-Jessi
 C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-2-JessieJi-TessLarcade.csproj.CoreCompileInputs.cache
 C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-4-JessieJi.exe
 C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-4-JessieJi.pdb
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\bin\Debug\Newtonsoft.Json.dll
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\bin\Debug\Newtonsoft.Json.xml
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-2-JessieJi-TessLarcade.csprojResolveAssemblyReference.cache
