@@ -1,0 +1,12 @@
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\bin\Debug\MegaDesk-4-JessieJi.exe.config
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\bin\Debug\MegaDesk-4-JessieJi.exe
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\bin\Debug\MegaDesk-4-JessieJi.pdb
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk_4_JessieJi.AddQuote.resources
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk_4_JessieJi.MainMenu.resources
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk_4_JessieJi.Properties.Resources.resources
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk_4_JessieJi.SearchQuotes.resources
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk_4_JessieJi.ViewAllQuotes.resources
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-2-JessieJi-TessLarcade.csproj.GenerateResource.Cache
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-2-JessieJi-TessLarcade.csproj.CoreCompileInputs.cache
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-4-JessieJi.exe
+C:\Users\JessieJay\source\repos\MegaDesk-2-JessieJi-TessLarcade\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-4-JessieJi.pdb
