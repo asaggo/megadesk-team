@@ -1,0 +1,15 @@
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\bin\Debug\MegaDesk-4-JessieJi.exe.config
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\bin\Debug\MegaDesk-4-JessieJi.exe
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\bin\Debug\MegaDesk-4-JessieJi.pdb
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-2-JessieJi-TessLarcade.csprojResolveAssemblyReference.cache
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk_4_JessieJi.AddQuote.resources
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk_4_JessieJi.MainMenu.resources
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk_4_JessieJi.Properties.Resources.resources
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk_4_JessieJi.SearchQuotes.resources
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk_4_JessieJi.ViewAllQuotes.resources
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-2-JessieJi-TessLarcade.csproj.GenerateResource.Cache
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-2-JessieJi-TessLarcade.csproj.CoreCompileInputs.cache
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-4-JessieJi.exe
+C:\Users\Tess\Downloads\megadesk-team-master (3)\megadesk-team-master\MegaDesk-2-JessieJi-TessLarcade\obj\Debug\MegaDesk-4-JessieJi.pdb
